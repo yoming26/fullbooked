@@ -1,3 +1,7 @@
+<?php
+  require_once("../connection.php");
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -180,37 +184,25 @@
                   <th>Description</th>
                   <th>Actions</th>
                 </tr>
+                <?php
+                    $result = mysqli_query($db, "SELECT * FROM product");
+                  
+                    while($fetch = mysqli_fetch_array($result)) {
+                  ?>
                 <tr>
-                  <td>01</td>
-                  <td>The Testament</td>
-                  <td> <img src="C:\xampp\htdocs\fullbooked\im.jpg" height="100px;" ></td>
-                  <td>Margaret Atwood</td>
-                  <td><span>&#8369;750.00</span></td>
-                  <td>The Testaments is a 2019 novel by Margaret Atwood. It is a sequel to The Handmaid's Tale (1985). The novel is set 15 years after the events of The Handmaid's Tale. It is narrated by Aunt Lydia, a character from the previous novel; Agnes, a young woman living in Gilead; and Daisy, a young woman living in Canada.</td>
+                  <td><?php echo $fetch['ID'] ?></td>
+                  <td><?php echo $fetch['Product_name'] ?></td>
+                  <td> <img src="../im/<?php echo $fetch['Product_image'] ?>" height="100px;" ></td>
+                  <td><?php echo $fetch['Author'] ?></td>
+                  <td><span>&#8369;<?php echo $fetch['Product_price'] ?></span></td>
+                  <td><?php echo $fetch['description'] ?></td>
                                   <td class="text-center"><a class='btn btn-info btn-xs' data-toggle="modal" data-target="#myModal" href="#"><span class="fa fa-pencil-square"></span></a> <a href="#" class="btn btn-danger btn-xs"   data-toggle="modal" data-target="#ordine"><span class="fa fa-trash"></span></a></td>
                 </tr>
-                <tr>
-                 <td>02</td>
-                  <td>Smashed</td>
-                  <td> <img src="im/2.jpg" height="100px;" ></td>
-                  <td>Koren Zailckas </td>
-                  <td><span>&#8369;650.00</span></td>
-                  <td>"Smashed: Story of a Drunken Girlhood is a memoir written in 2005 by American writer Koren Zailckas and published by Viking Press. The book has spent more than 10 weeks on the New York Times Best Seller list."</td>
-                                  <td class="text-center"><a class='btn btn-info btn-xs' data-toggle="modal" data-target="#myModal" href="#"><span class="fa fa-pencil-square"></span></a> <a href="#" class="btn btn-danger btn-xs"   data-toggle="modal" data-target="#ordine"><span class="fa fa-trash"></span></a></td>
-                </tr>
-                <tr>
-                 
-                 
-             
-                 
-                  <td>03</td>
-                  <td>Norse Mytholog</td>
-                  <td> <img src="im/3.jpg" height="100px;" ></td>
-                  <td>Neil Gaiman </td>
-                  <td><span>&#8369;650.00</span></td>
-                  <td>Norse mythology is the body of myths of the North Germanic peoples, stemming from Norse paganism and continuing after the Christianization of Scandinavia, and into the Scandinavian folklore of the modern period.</td>
-                                  <td class="text-center"><a class='btn btn-info btn-xs' data-toggle="modal" data-target="#myModal" href="#"><span class="fa fa-pencil-square"></span></a> <a href="#" class="btn btn-danger btn-xs"   data-toggle="modal" data-target="#ordine"><span class="fa fa-trash"></span></a></td>
-                </tr>
+
+                <?php
+                  }
+                ?>
+                
               
               </table>
             </div>

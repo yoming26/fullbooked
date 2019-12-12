@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['user'])) {
+         
+?>
+
   <!DOCTYPE html>
 <html>
 
@@ -47,21 +54,7 @@
         <ul class="nav navbar-nav">
         
      <!-- User Account -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="" class="user-image">
-              <span class="hidden-xs">Marlon Ocsan</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="" class="img-circle">
-
-                <p>
-                  Marlon Ocsan
-                  <small>Administrator</small>
-                </p>
-              </li>
+          
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
@@ -125,6 +118,7 @@
         <li><a href="trans.html"><i class="fa fa-dollar"></i> <span>Transactions</span></a></li>
          <li><a href="chat.html"><i class="fa fa-comment"></i> <span>Chats</span></a></li>
         <li><a href="report.html"><i class="fa fa-book"></i> <span>Reports</span></a></li>
+        <li><a href="logout.php?logout"><i class="glyphicon glyphicon-log-out"></i> <span>Logout</span></a></li>
         
       </ul>
     </section>
@@ -952,3 +946,11 @@
 
 <!-- Mirrored from adminlte.io/themes/AdminLTE/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Dec 2019 02:27:56 GMT -->
 </html>
+
+<?php
+
+     }
+    else {
+        header('location: login.php');
+    }
+?>
