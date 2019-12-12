@@ -116,9 +116,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="product.html"><i class="fa fa-circle-o"></i> Products </a></li>
-            <li class="active"><a href="users.html"><i class="fa fa-circle-o"></i> Users</a></li>
-            <li><a href="feedbacks.html"><i class="fa fa-circle-o"></i> Feedback</a></li>
+            <li><a href="product.php"><i class="fa fa-circle-o"></i> Products </a></li>
+            <li class="active"><a href="users.php"><i class="fa fa-circle-o"></i> Users</a></li>
+            <li><a href="feedbacks.php"><i class="fa fa-circle-o"></i> Feedback</a></li>
           </ul>
         </li>
         <li><a href="trans.html"><i class="fa fa-dollar"></i> <span>Transactions</span></a></li>
