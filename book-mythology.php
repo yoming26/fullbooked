@@ -50,7 +50,7 @@
 					<div class="col-lg-8 d-none d-lg-block">
 						<nav class="mainmenu__nav">
 							<ul class="meninmenu d-flex justify-content-start">
-								<li><a href="index.php">Home</a>
+								<li><a href="index-2.php">Home</a>
 								</li>
 								<li><a href="shop-grid.php">Shop</a>
 								</li>
