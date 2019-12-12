@@ -1,0 +1,17 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+susan-demo.myshopify.com	TRUE	/26589331530/checkouts/40f076d235d8ffc2dd30cafaba1aa2cb	FALSE	1999999999	checkout	eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaVZoTnpnMlkyUmlaalppTkRZeE5qbGlZbU14TlRRNU1HUmhOMk5pWm1WbE1BWTZCa1ZVIiwiZXhwIjoiMjAxOS0xMi0wOFQwMjo1NToyMS45OTFaIiwicHVyIjoiY29va2llLmNoZWNrb3V0In19--ab7dcdc8b2f640a337f4f55e58c755f3771168f4
+susan-demo.myshopify.com	TRUE	/26589331530	FALSE	1999999999	checkout_token	eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaVUwTUdZd056WmtNak0xWkRobVptTXlaR1F6TUdOaFptRmlZVEZoWVRKallnWTZCa1ZVIiwiZXhwIjoiMjAyMC0xMS0xN1QwMjo1NToyMS45OTFaIiwicHVyIjoiY29va2llLmNoZWNrb3V0X3Rva2VuIn19--c44b590312d4df4ab9c79dadf5d2f25e0fb85011
+susan-demo.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_country	Philippines
+susan-demo.myshopify.com	TRUE	/	FALSE	1999999999	_landing_page	%2F
+.myshopify.com	TRUE	/	FALSE	1999999999	__cfduid	df9a9043343d75ceb0d954e1df4f345ff1573958543
+.fireapps.vn	TRUE	/	FALSE	1999999999	__cfduid	dc18c5553e0951d044754c64e61a2db431573958561
+susan-demo.myshopify.com	TRUE	/	FALSE	1999999999	cart_currency	USD
+susan-demo.myshopify.com	TRUE	/	FALSE	1999999999	cart_ts	1573958580
+susan-demo.myshopify.com	TRUE	/	FALSE	1999999999	cart	c9f1079884802b929fe288f343fc50be
+susan-demo.myshopify.com	TRUE	/	FALSE	1999999999	_secure_session_id	5e41c073bf18a38bdb62442cfc2318cf
+susan-demo.myshopify.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+susan-demo.myshopify.com	TRUE	/	FALSE	1999999999	preview_theme	1
+susan-demo.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_s	d7a7f334-a507-4c99-9f55-a9f05377cecf
+susan-demo.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_y	73277d4a-c07b-42ab-a9d6-004b6f79764f
+
