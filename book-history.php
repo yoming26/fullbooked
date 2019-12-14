@@ -1,3 +1,8 @@
+<?php
+	require_once("connection.php");
+	$logacc="Sign In";
+?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -94,88 +99,9 @@
 						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
 							<li class="shop_search"><a class="search__active" href="#"></a></li>
 							<li class="wishlist"><a href="#"></a></li>
-							<li class="shopcart"><a class="cartbox_active" href="#"><span
-										class="product_qun">3</span></a>
-								<div class="block-minicart minicart__active">
-									<div class="minicart-content-wrapper">
-										<div class="micart__close">
-											<span>close</span>
-										</div>
-										<div class="items-total d-flex justify-content-between">
-											<span>3 items</span>
-											<span>Cart Subtotal</span>
-										</div>
-										<div class="total_amount text-right">
-											<span>&#8369;900.00</span>
-										</div>
-										<div class="mini_action checkout">
-											<a class="checkout__btn" href="cart.php">Go to Checkout</a>
-										</div>
-										<div class="single__items">
-											<div class="miniproduct">
-												<div class="item01 d-flex">
-													<div class="thumb">
-														<a href="product-details.php"><img
-																src="im\22.jpg"
-																alt="product images"></a>
-													</div>
-													<div class="content">
-														<h6><a href="product-details.php">Voyage Yoga Bag</a></h6>
-														<span class="prize">&#8369;300.00</span>
-														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Qty: 01</span>
-															<ul class="d-flex justify-content-end">
-																<li><a href="#"><i class="zmdi zmdi-delete"></i></a>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-												<div class="item01 d-flex mt--20">
-													<div class="thumb">
-														<a href="product-details.php"><img
-																src="im\23.jpg"
-																alt="product images"></a>
-													</div>
-													<div class="content">
-														<h6><a href="product-details.php">Impulse Duffle</a></h6>
-														<span class="prize">&#8369;100.00</span>
-														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Qty: 03</span>
-															<ul class="d-flex justify-content-end">
-																<li><a href="#"><i class="zmdi zmdi-delete"></i></a>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-												<div class="item01 d-flex mt--20">
-													<div class="thumb">
-														<a href="product-details.php"><img
-																src="im\25.jpg"
-																alt="product images"></a>
-													</div>
-													<div class="content">
-														<h6><a href="product-details.php">Compete Track Tote</a></h6>
-														<span class="prize">&#8369;100.00</span>
-														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Qty: 03</span>
-															<ul class="d-flex justify-content-end">
-																<li><a href="#"><i class="zmdi zmdi-delete"></i></a>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="mini_action cart">
-											<a class="cart__btn" href="cart.php">View and edit cart</a>
-										</div>
-									</div>
-								</div>
+							<li class="shopcart"><a class="cartbox_active" onclick="addtocart()">></a></li>
 								<!-- End Shopping Cart -->
-						</li>
+						
 							<li class="setting__bar__icon"><a class="setting__active" href="#"></a>
 								<div class="searchbar__content setting__block">
 									<div class="content-inner">
@@ -189,7 +115,7 @@
 													<div class="setting__menu">
 														<span><a href="#">My Account</a></span>
 														<span><a href="#">My Wishlist</a></span>
-														<span><a href="#">Sign In</a></span>
+														<span><a href="my-account.php" id="username"><?php echo $logacc; ?></a></span>
 														<span><a href="#">Create An Account</a></span>
 													</div>
 												</div>
@@ -1151,6 +1077,7 @@ Get How To: Absurd Scientific Advice for Common Real-World Problems (Paperback) 
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/active.js"></script>
+	<script src="cartfunction.js"></script>
 
 
 </body>

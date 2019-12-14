@@ -1,3 +1,8 @@
+<?php
+	require_once("connection.php");
+	$logacc="Sign In";
+?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -189,7 +194,7 @@
 													<div class="setting__menu">
 														<span><a href="#">My Account</a></span>
 														<span><a href="#">My Wishlist</a></span>
-														<span><a href="#">Sign In</a></span>
+														<span><a href="my-account.php" id="username"><?php echo $logacc; ?></a></span>
 														<span><a href="#">Create An Account</a></span>
 													</div>
 												</div>

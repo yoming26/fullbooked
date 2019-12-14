@@ -1,4 +1,6 @@
 ﻿<?php
+require_once("connection.php");
+	$logacc="Logout";
     session_start();
 
     if(isset($_SESSION['user'])) {
@@ -49,7 +51,7 @@
 					<div class="col-md-4 col-sm-4 col-7 col-lg-2">
 						<div class="logo">
 							<a href="user-index-2.php">
-								<img src="images/logo/logo.png" alt="logo images">
+								<img src="logo.png" alt="logo images">
 							</a>
 						</div>
 					</div>
@@ -58,7 +60,7 @@
 							<ul class="meninmenu d-flex justify-content-start">
 								<li><a href="user-index-2.php">Home</a>
 								</li>
-								<li><a href="shop-grid.php">Shop</a>
+								<li><a href="user-shop-grid.php">Shop</a>
 								</li>
 								<li class="drop"><a href="user-shop-grid.php">Books</a>
 									<div class="megamenu mega03">
@@ -96,94 +98,68 @@
 							</ul>
 						</nav>
 					</div>
+					<?php
+						$result = mysqli_query($db, "SELECT SUM(price) as 'total', count(quantity) as 'quantity' FROM addcart");
+						$fetch = mysqli_fetch_assoc($result);
+					?>
+					
+
 					<div class="col-md-8 col-sm-8 col-5 col-lg-2">
 						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
 							<li class="shop_search"><a class="search__active" href="#"></a></li>
 							<li class="wishlist"><a href="#"></a></li>
 							<li class="shopcart"><a class="cartbox_active" href="#"><span
-										class="product_qun">3</span></a>
-								<!-- Start Shopping Cart -->
+										class="product_qun"><?php echo $fetch['quantity']?></span></a>
 								<div class="block-minicart minicart__active">
 									<div class="minicart-content-wrapper">
 										<div class="micart__close">
 											<span>close</span>
 										</div>
 										<div class="items-total d-flex justify-content-between">
-											<span>3 items</span>
+											<span><?php echo $fetch['quantity']?> items</span>
 											<span>Cart Subtotal</span>
 										</div>
 										<div class="total_amount text-right">
-											<span>$66.00</span>
+											<span>&#8369;<?php echo $fetch['total']  ?></span>
 										</div>
 										<div class="mini_action checkout">
-											<a class="checkout__btn" href="user-cart.php">Go to Checkout</a>
+											<a class="checkout__btn" href="cart.php">Go to Checkout</a>
 										</div>
 										<div class="single__items">
+											<?php
+													$result = mysqli_query($db, "SELECT * FROM addcart");
+									
+													while($fetch = mysqli_fetch_array($result)) {
+						
+												?>
 											<div class="miniproduct">
 												<div class="item01 d-flex">
 													<div class="thumb">
 														<a href="product-details.php"><img
-																src="images/product/sm-img/1.jpg"
+																src="im/<?php echo $fetch['productImage'] ?>"
 																alt="product images"></a>
 													</div>
 													<div class="content">
-														<h6><a href="product-details.php">Voyage Yoga Bag</a></h6>
-														<span class="prize">$30.00</span>
+														<h6><a href="product-details.php"><?php echo $fetch['productName'] ?></a></h6>
+														<span class="prize">&#8369;<?php echo $fetch['price'] ?></span>
 														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Qty: 01</span>
+															<span class="qun">Qty: <?php echo $fetch['quantity']  ?></span>
 															<ul class="d-flex justify-content-end">
-																<li><a href="#"><i class="zmdi zmdi-settings"></i></a>
-																</li>
 																<li><a href="#"><i class="zmdi zmdi-delete"></i></a>
 																</li>
 															</ul>
 														</div>
 													</div>
-												</div>
-												<div class="item01 d-flex mt--20">
-													<div class="thumb">
-														<a href="product-details.php"><img
-																src="images/product/sm-img/3.jpg"
-																alt="product images"></a>
-													</div>
-													<div class="content">
-														<h6><a href="product-details.php">Impulse Duffle</a></h6>
-														<span class="prize">$40.00</span>
-														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Qty: 03</span>
-															<ul class="d-flex justify-content-end">
-																<li><a href="#"><i class="zmdi zmdi-settings"></i></a>
-																</li>
-																<li><a href="#"><i class="zmdi zmdi-delete"></i></a>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-												<div class="item01 d-flex mt--20">
-													<div class="thumb">
-														<a href="product-details.php"><img
-																src="images/product/sm-img/2.jpg"
-																alt="product images"></a>
-													</div>
-													<div class="content">
-														<h6><a href="product-details.php">Compete Track Tote</a></h6>
-														<span class="prize">$40.00</span>
-														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Qty: 03</span>
-															<ul class="d-flex justify-content-end">
-																<li><a href="#"><i class="zmdi zmdi-settings"></i></a>
-																</li>
-																<li><a href="#"><i class="zmdi zmdi-delete"></i></a>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
+
+																								
+												
 											</div>
 										</div>
+										<?php
+													} 
+												?>
 										<div class="mini_action cart">
-											<a class="cart__btn" href="user-cart.php">View and edit cart</a>
+											<a class="cart__btn" href="cart.php">View and edit cart</a>
 										</div>
 									</div>
 								</div>
@@ -248,7 +224,7 @@
 														<span><a href="#">Compare Product</a></span>
 														<span><a href="#">My Account</a></span>
 														<span><a href="#">My Wishlist</a></span>
-														<span><a href="logout.php?logout">Logout</a></span>
+														<span><a href="logout.php?logout" id="username"><?php echo $logacc; ?></a></span>
 													</div>
 												</div>
 											</div>

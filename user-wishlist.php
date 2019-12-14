@@ -1,4 +1,6 @@
 ﻿<?php
+require_once("connection.php");
+	$logacc="Logout";
     session_start();
 
     if(isset($_SESSION['user'])) {
@@ -196,7 +198,7 @@
 														<span><a href="#">Compare Product</a></span>
 														<span><a href="#">My Account</a></span>
 														<span><a href="#">My Wishlist</a></span>
-														<span><a href="logout.php?logout">Logout</a></span>
+														<span><a href="logout.php?logout" id="username"><?php echo $logacc; ?></a></span>
 													</div>
 												</div>
 											</div>
