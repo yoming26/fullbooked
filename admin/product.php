@@ -1,5 +1,9 @@
 <?php
   require_once("../connection.php");
+
+   session_start();
+
+    if(isset($_SESSION['user'])) {
 ?>
 
 <!DOCTYPE html>
@@ -53,29 +57,9 @@
       <!-- User Account -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="" class="user-image">
-              <span class="hidden-xs">Marlon Ocsan</span>
+              <span class="hidden-xs">Hello Admin</span>
             </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="" class="img-circle">
-
-                <p>
-                  Marlon Ocsan
-                  <small>Administrator</small>
-                </p>
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
+            
           </li>
           <!-- Control Sidebar Toggle Button -->
           
@@ -88,15 +72,7 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Marlon Ocsan</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
+      
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
@@ -122,12 +98,13 @@
           <ul class="treeview-menu">
             <li class="active"><a href="product.php"><i class="fa fa-circle-o"></i> Products </a></li>
             <li><a href="users.php"><i class="fa fa-circle-o"></i> Users</a></li>
-            <li><a href="feedbacks.php"><i class="fa fa-circle-o"></i> Feedback</a></li>
+            <li><a href="feedback.php"><i class="fa fa-circle-o"></i> Feedback</a></li>
           </ul>
         </li>
         <li><a href="trans.html"><i class="fa fa-dollar"></i> <span>Transactions</span></a></li>
          <li><a href="chat.html"><i class="fa fa-comment"></i> <span>Chats</span></a></li>
         <li><a href="report.html"><i class="fa fa-book"></i> <span>Reports</span></a></li>
+        <li><a href="logout.php?logout"><i class="glyphicon glyphicon-log-out"></i> <span>Logout</span></a></li
         
       </ul>
     </section>
@@ -157,7 +134,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <button type="submit" class="btn btn-success" href="add_product.html"  data-toggle="modal" data-target="#myModal" ><i class="fa fa-plus"></i></button>
+              <button type="submit" class="btn btn-success" href=""  data-toggle="modal" data-target="#myModal" ><i class="fa fa-plus"></i></button>
               <h3 class="box-title">Books</h3>
            
               <div class="box-tools">
@@ -174,7 +151,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive no-padding">
-              <table class="table table-hover">
+              <table class="table table-hover" id="productTable">
                 <tr>
                   <th>ID</th>
                   <th>Name</th>
@@ -247,13 +224,13 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-pencil-o"></i> UPDATE</h4>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-pencil-o"></i> ADD / UPDATE</h4>
       </div>
       <div class="modal-body">
    
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form>
               <div class="box-body">
                <div class="form-group">
                   <label for="book_id">Book ID</label>
@@ -272,11 +249,11 @@
                   <input type="text" class="form-control" id="book_price">
                 </div>
                  <div class="form-group">
-                  <label for="book_description">Book Author</label>
-                  <textarea class="form-control" rows="3" ></textarea>
+                  <label for="book_description">Book Description</label>
+                  <textarea class="form-control" rows="3" id="book_description"></textarea>
                 </div>
                 <div class="form-group">
-                  <label for="book_photo">File input</label>
+                  <label for="book_photo">Product Image</label>
                   <input type="file" id="book_photo">
 
                   
@@ -286,7 +263,7 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="submit" class="btn btn-primary" onclick="">Save</button>
               </div>
             </form>
           </div>
@@ -322,10 +299,17 @@
 <!-- ChartJS -->
 <script src="bower_components/chart.js/Chart.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard2.js"></script>
+
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 </body>
 
 <!-- Mirrored from adminlte.io/themes/AdminLTE/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Dec 2019 02:27:56 GMT -->
 </html>
+<?php
+
+     }
+    else {
+        header('location: login.php');
+    }
+?>
