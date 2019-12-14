@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2019 at 06:26 AM
+-- Generation Time: Dec 14, 2019 at 11:59 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -37,6 +37,25 @@ CREATE TABLE `addcart` (
   `quantity` int(11) NOT NULL,
   `price` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `ID` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`ID`, `username`, `password`) VALUES
+(1, 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -88,7 +107,8 @@ INSERT INTO `product` (`ID`, `Product_name`, `Product_price`, `Product_image`, `
 (8, 'Norse Mythology', '399.00', '3.jpg', 'hoyhoy', 'hkshfcshlc'),
 (9, 'The New Girl', '376.00', '4.jpg', 'ehJA', 'cdscs'),
 (10, 'Gods and Heroes', '199.00', '5.jpg', 'lisaj', 'lkasc'),
-(11, 'Love for imperfect things', '299.00', '6.jpg', 'csa', 'csa');
+(11, 'Love for imperfect things', '299.00', '6.jpg', 'csa', 'csa'),
+(13, 'hey', '134.00', '12.jpg', 'hey', 'gre');
 
 --
 -- Indexes for dumped tables
@@ -99,6 +119,12 @@ INSERT INTO `product` (`ID`, `Product_name`, `Product_price`, `Product_image`, `
 --
 ALTER TABLE `addcart`
   ADD PRIMARY KEY (`cartID`);
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `customer_info`
@@ -120,7 +146,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `addcart`
 --
 ALTER TABLE `addcart`
-  MODIFY `cartID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cartID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `customer_info`
@@ -132,7 +164,7 @@ ALTER TABLE `customer_info`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
