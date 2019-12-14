@@ -47,7 +47,7 @@
 				<div class="row">
 					<div class="col-md-4 col-sm-4 col-7 col-lg-2">
 						<div class="logo">
-							<a href="index.phpss">
+							<a href="index-2.phpss">
 								<img src="logo.png" alt="logo images">
 							</a>
 						</div>
@@ -55,7 +55,7 @@
 					<div class="col-lg-8 d-none d-lg-block">
 						<nav class="mainmenu__nav">
 							<ul class="meninmenu d-flex justify-content-start">
-								<li><a href="index.phpss">Home</a>
+								<li><a href="index-2.phpss">Home</a>
 								</li>
 								<li><a href="shop-grid.phpss">Shop</a>
 								</li>
@@ -236,7 +236,7 @@
 						<div class="bradcaump__inner text-center">
 							<h2 class="bradcaump-title">Product Details</h2>
 							<nav class="bradcaump-content">
-								<a class="breadcrumb_item" href="index.phpss">Home</a>
+								<a class="breadcrumb_item" href="index-2.phpss">Home</a>
 								<span class="brd-separetor">/</span>
 								<span class="breadcrumb_item active">Product</span>
 							</nav>
@@ -1027,7 +1027,7 @@
 						<div class="col-lg-12">
 							<div class="footer__widget footer__menu">
 								<div class="ft__logo">
-									<a href="index.phpss">
+									<a href="index-2.phpss">
 										<img src="logo.png" alt="logo">
 									</a>
 									<p>Fully Booked is all about finding the next great read. With over a hundred thousand titles across multiple genres—you'll never run out of stories. Visit one of our bookstores in the Philippines.</p>
@@ -1041,12 +1041,12 @@
 										<li><a href="#"><i class="bi bi-youtube"></i></a></li>
 									</ul>
 									<ul class="mainmenu d-flex justify-content-center">
-										<li><a href="index.phpss">Trending</a></li>
-										<li><a href="index.phpss">Best Seller</a></li>
-										<li><a href="index.phpss">All Product</a></li>
-										<li><a href="index.phpss">Wishlist</a></li>
-										<li><a href="index.phpss">Blog</a></li>
-										<li><a href="index.phpss">Contact</a></li>
+										<li><a href="index-2.phpss">Trending</a></li>
+										<li><a href="index-2.phpss">Best Seller</a></li>
+										<li><a href="index-2.phpss">All Product</a></li>
+										<li><a href="index-2.phpss">Wishlist</a></li>
+										<li><a href="index-2.phpss">Blog</a></li>
+										<li><a href="index-2.phpss">Contact</a></li>
 									</ul>
 								</div>
 							</div>

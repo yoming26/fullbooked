@@ -240,7 +240,7 @@ require_once("connection.php");
 					<div class="col-lg-12 d-none">
 						<nav class="mobilemenu__nav">
 							<ul class="meninmenu">
-								<li><a href="index.php">Home</a>
+								<li><a href="index-2.php">Home</a>
 									<ul>
 										<li><a href="">Home Style Default</a></li>
 										<li><a href="">Home Style Two</a></li>
@@ -320,7 +320,7 @@ require_once("connection.php");
 						<div class="bradcaump__inner text-center">
 							<h2 class="bradcaump-title">Contact Us</h2>
 							<nav class="bradcaump-content">
-								<a class="breadcrumb_item" href="index.php">Home</a>
+								<a class="breadcrumb_item" href="index-2.php">Home</a>
 								<span class="brd-separetor">/</span>
 								<span class="breadcrumb_item active">Contact Us</span>
 							</nav>
@@ -427,7 +427,7 @@ require_once("connection.php");
 						<div class="col-lg-12">
 							<div class="footer__widget footer__menu">
 								<div class="ft__logo">
-									<a href="index.php">
+									<a href="index-2.php">
 										<img src="images/logo/3.png" alt="logo">
 									</a>
 									<p>There are many variations of passages of Lorem Ipsum available, but the majority
@@ -442,12 +442,12 @@ require_once("connection.php");
 										<li><a href="#"><i class="bi bi-youtube"></i></a></li>
 									</ul>
 									<ul class="mainmenu d-flex justify-content-center">
-										<li><a href="index.php">Trending</a></li>
-										<li><a href="index.php">Best Seller</a></li>
-										<li><a href="index.php">All Product</a></li>
-										<li><a href="index.php">Wishlist</a></li>
-										<li><a href="index.php">Blog</a></li>
-										<li><a href="index.php">Contact</a></li>
+										<li><a href="index-2.php">Trending</a></li>
+										<li><a href="index-2.php">Best Seller</a></li>
+										<li><a href="index-2.php">All Product</a></li>
+										<li><a href="index-2.php">Wishlist</a></li>
+										<li><a href="index-2.php">Blog</a></li>
+										<li><a href="index-2.php">Contact</a></li>
 									</ul>
 								</div>
 							</div>

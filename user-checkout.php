@@ -239,9 +239,9 @@ require_once("connection.php");
 						<div class="bradcaump__inner text-center">
 							<h2 class="bradcaump-title">Checkout</h2>
 							<nav class="bradcaump-content">
-								<a class="breadcrumb_item" href="index.php">Home</a>
+								<a class="breadcrumb_item" href="index-2.php">Home</a>
 								<span class="brd-separetor">/</span>
-								<a class="breadcrumb_item" href="index.php">Cart</a>
+								<a class="breadcrumb_item" href="index-2.php">Cart</a>
 								<span class="brd-separetor">/</span>
 								<span class="breadcrumb_item active">Checkout</span>
 							</nav>
@@ -761,7 +761,7 @@ require_once("connection.php");
 						<div class="col-lg-12">
 							<div class="footer__widget footer__menu">
 								<div class="ft__logo">
-									<a href="index.php">
+									<a href="index-2.php">
 										<img src="logo.png" alt="logo">
 									</a>
 									<p>Fully Booked is all about finding the next great read. With over a hundred thousand titles across multiple genres—you'll never run out of stories. Visit one of our bookstores in the Philippines.</p>

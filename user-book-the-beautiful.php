@@ -50,7 +50,7 @@ require_once("connection.php");
 				<div class="row">
 					<div class="col-md-4 col-sm-4 col-7 col-lg-2">
 						<div class="logo">
-							<a href="index.php">
+							<a href="index-2.php">
 								<img src="logo.png" alt="logo images">
 							</a>
 						</div>
@@ -238,7 +238,7 @@ require_once("connection.php");
 						<div class="bradcaump__inner text-center">
 							<h2 class="bradcaump-title">Product Details</h2>
 							<nav class="bradcaump-content">
-								<a class="breadcrumb_item" href="index.php">Home</a>
+								<a class="breadcrumb_item" href="index-2.php">Home</a>
 								<span class="brd-separetor">/</span>
 								<span class="breadcrumb_item active">Product</span>
 							</nav>
