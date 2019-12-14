@@ -123,11 +123,11 @@ require_once("connection.php");
 											<span>close</span>
 										</div>
 										<div class="items-total d-flex justify-content-between">
-											<span><?php echo $fetch['quantity']?> items</span>
+											<span id="showQty"><?php echo $fetch['quantity']?> items</span>
 											<span>Cart Subtotal</span>
 										</div>
 										<div class="total_amount text-right">
-											<span>&#8369;<?php echo $fetch['total']  ?></span>
+											<span id="subtotal">&#8369;<?php echo $fetch['total']  ?></span>
 										</div>
 										<div class="mini_action checkout">
 											<a class="checkout__btn" href="cart.php">Go to Checkout</a>
@@ -142,15 +142,13 @@ require_once("connection.php");
 											<div class="miniproduct">
 												<div class="item01 d-flex">
 													<div class="thumb">
-														<img
-																src="im/<?php echo $fetch['productImage'] ?>"
-																alt="product images">
+														<img src="im/<?php echo $fetch['productImage'] ?>" alt="product images" id="pimage">
 													</div>
 													<div class="content">
-														<h6><a href="product-details.php"><?php echo $fetch['productName'] ?></a></h6>
+														<h6 id="pname"><a href="product-details.php"><?php echo $fetch['productName']?></a></h6>
 														<span class="prize">&#8369;<?php echo $fetch['price'] ?></span>
 														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Qty: <?php echo $fetch['quantity']  ?></span>
+															<span class="qun" id="pquantity">Qty: <?php echo $fetch['quantity']  ?></span>
 															<ul class="d-flex justify-content-end">
 																<li><a href="#"><i class="zmdi zmdi-delete"></i></a>
 																</li>
@@ -342,7 +340,7 @@ require_once("connection.php");
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="cart" onclick="addtocart()"><i
+														<li><a class="cart" onclick="addtocart(<?php echo $fetch['ID'] ?>)"><i
 																	class="bi bi-shopping-bag4"></i></a></li>
 														<li><a class="compare" href="wishlist.php"><i
 																	class="bi bi-heart-beat"></i></a></li>

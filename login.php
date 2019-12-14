@@ -14,6 +14,10 @@
 		header("location: user-index-2.php");
 	}
 	else{
-		header("location: my-account.php");
+		$message = 'Incorrect Email ID or Password.';
+		echo "<SCRIPT type='text/javascript'> //not showing me this
+        alert('$message');
+        window.location.replace(\"my-account.php\");
+                </SCRIPT>";
 	}
 ?>

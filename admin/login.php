@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
     
@@ -97,13 +95,13 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="email1" class="form-control input_user" placeholder="username" required>
+							<input type="text" name="uname" class="form-control input_user" placeholder="username" required>
 						</div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="password1" class="form-control input_pass" placeholder="password" required>
+							<input type="password" name="password" class="form-control input_pass" placeholder="password" required>
 						</div>
 						<div class="form-group">
 							<div class="custom-control custom-checkbox">
@@ -128,3 +126,4 @@
 	</div>
 </body>
 </html>
+
