@@ -12,7 +12,7 @@
 	if($fetch['username'] == $uname AND $fetch['password'] == $pass){
 		$_SESSION['user'] = $uname;
 
-		header("location: product.php");
+		header("location: index2.php");
 	}
 	else{
 		$message = 'Incorrect Username or Password.';

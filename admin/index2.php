@@ -101,8 +101,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="product.php"><i class="fa fa-circle-o"></i>Manage Product</a></li>
-            <li><a href="add_pro.php"><i class="fa fa-circle-o"></i>Add Product</a></li>
+            <li><a href="product.php"><i class="fa fa-circle-o"></i> Products </a></li>
             <li><a href="users.php"><i class="fa fa-circle-o"></i> Users</a></li>
             <li><a href="feedback.php"><i class="fa fa-circle-o"></i> Feedback</a></li>
           </ul>

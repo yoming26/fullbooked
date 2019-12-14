@@ -96,8 +96,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="product.php"><i class="fa fa-circle-o"></i>Manage Product</a></li>
-            <li><a href="add_pro.php"><i class="fa fa-circle-o"></i>Add Product</a></li>
+            <li class="active"><a href="product.php"><i class="fa fa-circle-o"></i> Products </a></li>
             <li><a href="users.php"><i class="fa fa-circle-o"></i> Users</a></li>
             <li><a href="feedback.php"><i class="fa fa-circle-o"></i> Feedback</a></li>
           </ul>
@@ -135,8 +134,8 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              
-              <h3 class="box-title"></h3>
+              <button type="submit" class="btn btn-success" href=""  data-toggle="modal" data-target="#myModal" ><i class="fa fa-plus"></i></button>
+              <h3 class="box-title">Books</h3>
            
               <div class="box-tools">
              
@@ -174,7 +173,7 @@
                   <td><?php echo $fetch['Author'] ?></td>
                   <td><span>&#8369;<?php echo $fetch['Product_price'] ?></span></td>
                   <td><?php echo $fetch['description'] ?></td>
-                                  <td class="text-center"><a class='btn btn-info btn-xs' href="edit_pro.php?id=<?php echo $fetch['ID'] ?>"><span class="fa fa-pencil-square"></span></a> <a href="delete_pro.php?id=<?php $fetch['ID'] ?>" class="btn btn-danger btn-xs"   data-toggle="modal" data-target="#ordine"><span class="fa fa-trash"></span></a></td>
+                                  <td class="text-center"><a class='btn btn-info btn-xs' data-toggle="modal" data-target="#myModal" href="#"><span class="fa fa-pencil-square"></span></a> <a href="#" class="btn btn-danger btn-xs"   data-toggle="modal" data-target="#ordine"><span class="fa fa-trash"></span></a></td>
                 </tr>
 
                 <?php
@@ -220,7 +219,62 @@
     </div>
     
     
-    
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-pencil-o"></i> ADD / UPDATE</h4>
+      </div>
+      <div class="modal-body">
+   
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form>
+              <div class="box-body">
+               <div class="form-group">
+                  <label for="book_id">Book ID</label>
+                  <input type="text" class="form-control" id="book_id" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="book_name">Book Name</label>
+                  <input type="text" class="form-control" id="book_name">
+                </div>
+                <div class="form-group">
+                  <label for="book_author">Book Author</label>
+                  <input type="text" class="form-control" id="book_author">
+                </div>
+                 <div class="form-group">
+                  <label for="book_price">Book Price</label>
+                  <input type="text" class="form-control" id="book_price">
+                </div>
+                 <div class="form-group">
+                  <label for="book_description">Book Description</label>
+                  <textarea class="form-control" rows="3" id="book_description"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="book_photo">Product Image</label>
+                  <input type="file" id="book_photo">
+
+                  
+                </div>
+                
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary" onclick="">Save</button>
+              </div>
+            </form>
+          </div>
+        
+       
+      
+        
+      
+        </div>
+    </div>
+    </div>
         
   <footer class="main-footer">
     <strong>Copyright &copy; 2019 FullyBooked.</strong> All rights
