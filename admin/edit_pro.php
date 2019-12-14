@@ -1,9 +1,12 @@
 <?php
-    session_start();
+  require_once("../connection.php");
+   session_start();
 
     if(isset($_SESSION['user'])) {
-         
 ?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -57,7 +60,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <span class="hidden-xs">Hello Admin</span>
             </a>
-           
+            
           </li>
           <!-- Control Sidebar Toggle Button -->
           
@@ -70,7 +73,7 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-     
+      
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
@@ -93,7 +96,7 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-         <ul class="treeview-menu">
+          <ul class="treeview-menu">
             <li class="active"><a href="product.php"><i class="fa fa-circle-o"></i>Manage Product</a></li>
             <li><a href="add_pro.php"><i class="fa fa-circle-o"></i>Add Product</a></li>
             <li><a href="users.php"><i class="fa fa-circle-o"></i> Users</a></li>
@@ -122,140 +125,42 @@
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Manage</a></li>
-        <li class="active">Users</li>
+        <li class="active">Products</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content" >
      
-              <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Books</h3>
-
-              <div class="box-tools">
-                <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-                  <div class="input-group-btn">
-                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body table-responsive no-padding">
-              <table class="table table-hover">
-                <tr>
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Photo</th>
-                  <th>Menber Since</th>
-                  <th>Email</th>
-                  <th>Password</th>
-                  <th>Actions</th>
-                </tr>
-                <tr>
-                  <td>01</td>
-                  <td>Anna Dangoy</td>
-                  <td> <img src="" height="100px;" ></td>
-                  <td>12//12/2018</td>
-                  <td>adangoy777@gmail.com</td>
-                  <td>anna777</td>
-                  <td class="text-center"><a class='btn btn-info btn-xs' data-toggle="modal" data-target="#myModal" href="#"><span class="fa fa-pencil-square"></span></a> <a href="#" class="btn btn-danger btn-xs"   data-toggle="modal" data-target="#ordine"><span class="fa fa-trash"></span></a></td>
-                </tr>
-                <tr>
-                 <td>02</td>
-                  <td>Joshua Cabillan</td>
-                  <td> <img src="" height="100px;" ></td>
-                  <td>01//12/2018</td>
-                  <td>qwerty@gmail.com</td>
-                  <td>qwerty</td>
-                  <td class="text-center"><a class='btn btn-info btn-xs' data-toggle="modal" data-target="#myModal" href="#"><span class="fa fa-pencil-square"></span></a> <a href="#" class="btn btn-danger btn-xs"   data-toggle="modal" data-target="#ordine"><span class="fa fa-trash"></span></a></td>
-                </tr>
-                <tr>
-                  <td>03</td>
-                  <td>Teodoro Baptista</td>
-                  <td> <img src="" height="100px;" ></td>
-                  <td>11//12/2018</td>
-                  <td>bongbong@gmail.com</td>
-                  <td>bongbong</td>
-                  <td class="text-center"><a class='btn btn-info btn-xs' data-toggle="modal" data-target="#myModal" href="#"><span class="fa fa-pencil-square"></span></a> <a href="#" class="btn btn-danger btn-xs"   data-toggle="modal" data-target="#ordine"><span class="fa fa-trash"></span></a></td>
-                </tr>
-              
-              </table>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-        </div>
-      </div>
-         
-       
-        
-      </section>
-    </div>
-    
-     <!-- Modal -->
-<div id="ordine" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h4 class="modal-title">You are about to delete this item</h4>
-      </div>
-      <div class="modal-body">
-        <p>Are you sure you want to delete this?</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Delete</button>
-      </div>
-    </div>
-
-       
-    </div>
-    
-    
-    </div>
-    
-    
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-pencil-o"></i> ADD / UPDATE</h4>
-      </div>
-      <div class="modal-body">
-   
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form">
+         <form action="addprod.php" method="POST">
               <div class="box-body">
                <div class="form-group">
-                  <label for="mem_id">Member ID</label>
-                  <input type="text" class="form-control" id="mem_id" readonly>
+                  <label for="book_id">Book ID</label>
+                  <input type="text" class="form-control" name="book_id" readonly>
                 </div>
                 <div class="form-group">
-                  <label for="mem_name">Member Name</label>
-                  <input type="text" class="form-control" id="mem_name">
+                  <label for="book_name">Book Name</label>
+                  <input type="text" class="form-control" name="book_name">
                 </div>
                 <div class="form-group">
-                  <label for="mem_date">Member Since</label>
-                  <input type="date" class="form-control" id="mem_date">
+                  <label for="book_author">Book Author</label>
+                  <input type="text" class="form-control" name="book_author">
                 </div>
                  <div class="form-group">
-                  <label for="mem_email">Member Email</label>
-                  <input type="email" class="form-control" id="mem_email">
+                  <label for="book_price">Book Price</label>
+                  <input type="text" class="form-control" name="book_price">
                 </div>
                  <div class="form-group">
-                  <label for="mem_pass">Member Password</label>
-                  <input type="password" class="form-control" id="mem_pass">
+                  <label for="book_description">Book Description</label>
+                  <textarea class="form-control" rows="3" name="book_description"></textarea>
                 </div>
+                <div class="form-group">
+                  <label for="book_photo">Product Image</label>
+                  <input type="file" name="book_photo">
+
+              
+                </div>
+                
               </div>
               <!-- /.box-body -->
 
@@ -263,17 +168,15 @@
                 <button type="submit" class="btn btn-primary">Save</button>
               </div>
             </form>
-          </div>
-        
        
-      
         
-      
-        </div>
-    </div>
+      </section>
     </div>
     
-        
+     <!-- Modal -->
+
+    
+   
   <footer class="main-footer">
     <strong>Copyright &copy; 2019 FullyBooked.</strong> All rights
     reserved.
@@ -297,7 +200,7 @@
 <!-- ChartJS -->
 <script src="bower_components/chart.js/Chart.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard2.js"></script>
+
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 </body>
@@ -311,4 +214,3 @@
         header('location: login.php');
     }
 ?>
-
